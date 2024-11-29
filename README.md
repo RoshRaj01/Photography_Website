@@ -6,18 +6,23 @@ Rosh Raj Photography is a personal portfolio website created to showcase the pho
 ## Features
 1. **Home Section**:
    - Welcoming section with a stunning hero image and brief description of the website.
+![Screenshot 2024-11-29 141103](https://github.com/user-attachments/assets/7fbf3f06-e858-4fc7-916a-1932ede57b13)
 
 2. **Photo Gallery**:
    - A responsive photo gallery showcasing selected photographs.
+![Screenshot 2024-11-29 141449](https://github.com/user-attachments/assets/e9239140-229d-4434-a4bb-eba0da1c3ff2)
 
 3. **About Section**:
    - Detailed biography of Rosh Raj, highlighting inspirations, photography journey, and creative process.
+![Screenshot 2024-11-29 141337](https://github.com/user-attachments/assets/0660e78f-d8c6-44a4-84f5-d57c8a1bf06c)
 
 4. **User Authentication**:
    - Signup and login functionalities for users.
    - Validation of existing users during signup.
    - Secure password management.
    - Logout functionality.
+![Screenshot 2024-11-29 141647](https://github.com/user-attachments/assets/a8f07f37-0e0e-4d0a-a8a3-5b38b2d64775)
+![Screenshot 2024-11-29 141622](https://github.com/user-attachments/assets/e2050726-efa1-49ea-a958-c91cee131722)
 
 5. **Responsive Design**:
    - Fully responsive and compatible with mobile and desktop devices.
