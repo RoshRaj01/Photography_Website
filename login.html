@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login - Rosh Raj Photography</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="camera.png">
+
+    <style>
+        body {
+            background-image: url('images/hero-min.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            margin-top: 10%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-control {
+            border-radius: 20px;
+        }
+
+        .btn-custom {
+            border-radius: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btn-custom:hover {
+            background-color: #555;
+        }
+
+        .text-small {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="login-container">
+            <h3 class="text-center">Welcome Back</h3>
+            <form id="loginForm" method="POST" action="login.php">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-custom btn-block mt-4">Login</button>
+                <div class="text-center mt-3">
+                    <p class="text-small">Don't have an account? <a href="signup.html">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#loginForm').on('submit', function (e) {
+                e.preventDefault();
+                const email = $('#email').val();
+                const password = $('#password').val();
+    
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email.');
+                    return;
+                }
+    
+                if (password.length < 6) {
+                    alert('Password must be at least 6 characters long.');
+                    return;
+                }
+    
+                // If login is successful, show the alert and redirect after 2 seconds
+                alert('Login successful! You will be redirected shortly.');
+                setTimeout(function () {
+                    window.location.href = 'index1.php'; 
+                }, 2000); // 2-second delay before redirecting
+            });
+    
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+        });
+    </script>    
+</body>
+
+</html>
